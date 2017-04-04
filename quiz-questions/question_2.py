@@ -28,8 +28,14 @@ def number_of_customers_per_state(customers):
         'NY': 1
     }
     """
-    # Write your code here
-    pass
+    newDict={}
+    for x in customers:
+        if customers[x] != None:
+            newDict[x] = len(customers[x])
+        else:
+            newDict[x] = 0
+    return newDict
+    
 
 
 class NumberOfCustomersPerStateTestCase(unittest.TestCase):
